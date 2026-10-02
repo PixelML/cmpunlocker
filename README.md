@@ -1,3 +1,23 @@
+> **PixelML branch `cmp170hx-plx-p2p-2026-10`** — the exact driver build behind the
+> [PixelML/club-170hx](https://github.com/PixelML/club-170hx) notebooks of 2026-10-01/02
+> (static-BAR1 P2P #68, GLM-5.3-Flash TP4 #69, 74 SM / HBM / power notebook #71;
+> see `docs/CMP170HX-UNDERSTANDING.md` there).
+>
+> | | |
+> |---|---|
+> | Upstream base | `amoghmunikote/cmpunlocker` @ `6c442ee` ("Add more SMs", 70 → 74 SM) |
+> | Added here | PR #60 HBM PLMs (`hbm-control-plm.patch`), BAR1 resize serialization (`rebar-serialize.patch`, same fix as upstream PR #59), 4 static-BAR1 P2P patches (via admunch888/cmpunlocker, after bayley), `platform/plx-static-bar1/` boot tooling |
+> | Driver | NVIDIA open 615.71.09 |
+> | Kernel tested | 7.0.2-6-pve (Proxmox VE 9.2.2) |
+> | Install used | `./install.sh --profile=8gb --no-gen2-service --no-iommu` |
+>
+> **Measured** on one host (4 × CMP 170HX 8 GB, two PLX PEX 8747 switches, Broadwell Xeon):
+> 64 GB and 74 SM per card, Gen2 x16, 12/12 P2P pairs (with `platform/plx-static-bar1/`),
+> 0 boot crashes after `rebar-serialize`. **Untested:** other driver versions, 10 GB cards,
+> AMD hosts. The P2P patches need `NVreg_RegistryDwords=RMForceStaticBar1=1;RMPcieP2PType=1`
+> at load time (`platform/plx-static-bar1/cmp-nvidia-guard` sets it). Everything below this box
+> is the upstream README.
+
 <div align="center" style="text-align: center;">
   <img width="1280" height="300" alt="cmpunlocker banner" src="https://github.com/user-attachments/assets/6edceb8e-afcb-43a4-b5b2-4321d81284d1" />
 </div>

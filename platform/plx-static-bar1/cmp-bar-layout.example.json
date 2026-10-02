@@ -1,0 +1,15 @@
+{
+  "_comment": "EXAMPLE ONLY - placeholders, not a real host. Copy to /etc/cmp-bar-layout.json and fill in your own BDFs and bases (README.md, 'Deriving the layout'). Two switches, two cards each.",
+  "cards": {
+    "AA:00.0": ["SS:08.0", "0x31000000000"],
+    "BB:00.0": ["SS:10.0", "0x33000000000"],
+    "CC:00.0": ["TT:08.0", "0x35000000000"],
+    "DD:00.0": ["TT:10.0", "0x37000000000"]
+  },
+  "upstream": {
+    "SU:00.0": ["AA:00.0", "BB:00.0"],
+    "RP:02.0": ["AA:00.0", "BB:00.0"],
+    "TU:00.0": ["CC:00.0", "DD:00.0"],
+    "RP:03.0": ["CC:00.0", "DD:00.0"]
+  }
+}
