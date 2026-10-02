@@ -59,6 +59,10 @@ PATCH_ORDER=(
     cmp-sku-mask.patch
     hbm-control-plm.patch
     rebar-serialize.patch
+    p2p-caps-override.patch
+    p2p-bar1.patch
+    p2p-skip-mailbox-preinit.patch
+    p2p-readcap-override.patch
 )
 PATCH_FILES=()
 for name in "${PATCH_ORDER[@]}"; do

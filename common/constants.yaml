@@ -137,3 +137,19 @@ unlocks:
   rebar-serialize:
     patch: rebar-serialize.patch
     registers: {}
+
+  p2p-caps-override:
+    patch: p2p-caps-override.patch
+    registers: {}
+
+  p2p-bar1:
+    patch: p2p-bar1.patch
+    registers: {}
+
+  p2p-skip-mailbox-preinit:
+    patch: p2p-skip-mailbox-preinit.patch
+    registers: {}
+
+  p2p-readcap-override:
+    patch: p2p-readcap-override.patch
+    registers: {}
