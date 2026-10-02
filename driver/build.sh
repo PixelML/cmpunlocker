@@ -57,6 +57,7 @@ PATCH_ORDER=(
     name-string.patch
     bar1-resize-unlock.patch
     cmp-sku-mask.patch
+    hbm-control-plm.patch
 )
 PATCH_FILES=()
 for name in "${PATCH_ORDER[@]}"; do
