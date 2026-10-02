@@ -133,3 +133,7 @@ unlocks:
   cmp-sku-mask:
     patch: cmp-sku-mask.patch
     registers: {}
+
+  rebar-serialize:
+    patch: rebar-serialize.patch
+    registers: {}

@@ -58,6 +58,7 @@ PATCH_ORDER=(
     bar1-resize-unlock.patch
     cmp-sku-mask.patch
     hbm-control-plm.patch
+    rebar-serialize.patch
 )
 PATCH_FILES=()
 for name in "${PATCH_ORDER[@]}"; do
